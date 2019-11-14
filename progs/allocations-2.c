@@ -6,18 +6,18 @@ int main(void)
 {
     unsigned long vm_start = vmsize();
 
-    void *a = malloc(500);
-    void *b = malloc(1000);
-    void *c = malloc(250);
-    void *d = malloc(250);
-    void *e = malloc(500);
+    void *a = malloc_name(500, "Test Allocation: 0");
+    void *b = malloc_name(1000, "Test Allocation: 1");
+    void *c = malloc_name(250, "Test Allocation: 2");
+    void *d = malloc_name(250, "Test Allocation: 3");
+    void *e = malloc_name(500, "Test Allocation: 4");
 
     free(b);
     free(d);
 
-    void *f = malloc(600);
-    void *g = malloc(150);
-    void *h = malloc(50);
+    void *f = malloc_name(600, "Test Allocation: 5");
+    void *g = malloc_name(150, "Test Allocation: 6");
+    void *h = malloc_name(50, "Test Allocation: 7");
 
     unsigned long vm_end = vmsize();
 
